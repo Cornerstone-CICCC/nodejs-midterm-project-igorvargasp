@@ -1,15 +1,15 @@
 import { NavLink } from 'react-router-dom'
 
 const navItems = [
-  { to: '/', label: 'Workspace', icon: '⌗' },
+  { to: '/workspace', label: 'Workspace', icon: '⌗' },
   { to: '/tags', label: 'Tag Library', icon: '◉' },
 ]
 
 export default function Sidebar() {
   return (
     <aside className="w-[280px] min-h-screen border-r-2 border-border bg-surface flex flex-col p-6 shrink-0">
-      <h1 className="text-xl font-bold font-heading text-text mb-8">
-        Creative Organizer
+      <h1 className="flex items-center text-xl font-bold font-heading text-primary mb-8">
+        <img src="/logo.png" alt="" className="h-6 w-auto" />TASHY
       </h1>
 
       <nav className="flex flex-col gap-1">
