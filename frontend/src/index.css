@@ -1,13 +1,28 @@
 @import "tailwindcss";
+@source "../src/**/*.{js,jsx,ts,tsx}";
 
 @theme {
   --color-primary: #FF5A5F;
+  --color-primary-container: #FF5A5F;
+  --color-on-primary-container: #FFFFFF;
   --color-background: #F9F8F4;
   --color-surface: #FFFFFF;
+  --color-surface-container-low: #FFFFFF;
+  --color-surface-container: #F4F2EB;
+  --color-surface-container-high: #EBE9E1;
+  --color-surface-container-highest: #E2E0D8;
+  --color-surface-container-lowest: #FFFFFF;
+  --color-on-surface: #2B2D42;
+  --color-on-background: #2B2D42;
+  --color-on-surface-variant: #565867;
+  --color-outline: #2B2D42;
+  --color-outline-variant: #D1D1D1;
   --color-text: #2B2D42;
   --color-muted: #8D99AE;
   --color-border: #EDDFD0;
   --color-code-bg: #1E1E24;
+  --color-tertiary: #00A879;
+  --color-error: #B00020;
 
   --color-tag-react-bg: #E0F7FA;
   --color-tag-react-text: #00838F;
@@ -17,7 +32,8 @@
   --color-tag-css-text: #283593;
 
   --font-heading: 'Space Grotesk', sans-serif;
-  --font-body: 'DM Sans', sans-serif;
+  --font-body: 'Manrope', sans-serif;
+  --font-label: 'Manrope', sans-serif;
   --font-code: 'Fira Code', monospace;
 
   --radius-sm: 6px;
@@ -27,16 +43,10 @@
   --shadow-offset: 4px 4px 0px rgba(237, 223, 208, 1);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: var(--font-body);
   background-color: var(--color-background);
-  color: var(--color-text);
+  color: var(--color-on-background);
   min-height: 100vh;
 }
 
@@ -46,4 +56,16 @@ h1, h2, h3, h4, h5, h6 {
 
 code, pre {
   font-family: var(--font-code);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.tactile-shadow {
+  box-shadow: 4px 4px 0px rgba(43, 45, 66, 0.9);
+}
+
+.architect-border {
+  border: 2px solid #2B2D42;
 }
