@@ -1,4 +1,9 @@
+import { Link } from 'react-router-dom'
+import { useAuth } from '../context/AuthContext'
+
 export default function Home() {
+  const { user, logout } = useAuth()
+
   return (
     <div className="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
       {/* Top Navigation Bar */}
@@ -13,8 +18,17 @@ export default function Home() {
             <a className="text-on-surface hover:text-primary transition-colors font-heading text-sm font-bold uppercase tracking-tight" href="#">Pricing</a>
           </div>
           <div className="flex items-center gap-4">
-            <button className="text-on-surface font-label font-bold uppercase text-[0.6875rem] px-4 py-2 transition-transform active:scale-95">Sign In</button>
-            <button className="bg-primary text-white font-label font-bold uppercase text-[0.6875rem] px-6 py-3 tactile-shadow hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all active:scale-95">Get Started</button>
+            {user ? (
+              <>
+                <Link to="/workspace" className="text-on-surface font-label font-bold uppercase text-[0.6875rem] px-4 py-2 transition-transform active:scale-95">Workspace</Link>
+                <button onClick={logout} className="bg-primary text-white font-label font-bold uppercase text-[0.6875rem] px-6 py-3 tactile-shadow hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all active:scale-95">Sign Out</button>
+              </>
+            ) : (
+              <>
+                <Link to="/signin" className="text-on-surface font-label font-bold uppercase text-[0.6875rem] px-4 py-2 transition-transform active:scale-95">Sign In</Link>
+                <Link to="/signup" className="bg-primary text-white font-label font-bold uppercase text-[0.6875rem] px-6 py-3 tactile-shadow hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all active:scale-95">Get Started</Link>
+              </>
+            )}
           </div>
         </div>
       </nav>
