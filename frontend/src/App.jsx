@@ -9,10 +9,12 @@ import SignIn from './pages/SignIn'
 import ForgotPassword from './pages/ForgotPassword'
 import ResetPassword from './pages/ResetPassword'
 import SignUp from './pages/SignUp'
+import CommandCenter from './components/CommandCenter'
 
 export default function App() {
   return (
     <BrowserRouter>
+      <CommandCenter />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route element={<ProtectedRoute><Layout /></ProtectedRoute>}>
