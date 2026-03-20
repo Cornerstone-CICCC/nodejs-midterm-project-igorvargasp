@@ -73,3 +73,23 @@ code, pre {
 .architectural-border {
   border: 2px solid #EDDFD0;
 }
+
+/* Prose overrides for markdown preview */
+.prose-sm h1 { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+.prose-sm h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+.prose-sm h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
+.prose-sm p { margin-bottom: 0.5rem; }
+.prose-sm ul, .prose-sm ol { padding-left: 1.25rem; margin-bottom: 0.5rem; }
+.prose-sm li { margin-bottom: 0.25rem; }
+.prose-sm blockquote { border-left: 3px solid #EDDFD0; padding-left: 1rem; color: #8D99AE; }
+
+/* Command Center animation */
+@keyframes commandUp {
+  from { opacity: 0; transform: scale(0.95) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Command Center scrollbar */
+.command-results-scroll::-webkit-scrollbar { width: 6px; }
+.command-results-scroll::-webkit-scrollbar-track { background: transparent; }
+.command-results-scroll::-webkit-scrollbar-thumb { background-color: #EDDFD0; border-radius: 10px; }
