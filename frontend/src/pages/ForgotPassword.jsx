@@ -81,7 +81,6 @@ export default function ForgotPassword() {
             {sent && resetLink && (
               <div className="bg-green-50 border-2 border-green-300 px-4 py-4 mb-6 space-y-3">
                 <p className="text-green-800 font-body text-sm font-bold">Reset link generated!</p>
-                <p className="text-green-700 font-body text-xs">Since this app has no email service, here is your reset link:</p>
                 <a
                   href={resetLink}
                   className="text-primary font-body text-sm font-bold underline underline-offset-4 break-all block"
